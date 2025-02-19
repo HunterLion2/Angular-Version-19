@@ -11,6 +11,7 @@ import { FormsModule, NgForm } from '@angular/forms';
   imports: [RouterOutlet, HomeComponent, AboutComponent, ContactComponent,FormsModule], // Buraya eklediklerimi buranın html kısmında selector'a ne yazdıysak onu html de kullanabiliriz
   // aynı zaman da buraya hangi değerleri eklersek onların içindeki function değerlerini ve diğer değerleride kullanabiliriz.
   template: `
+  <router-oulet>
     <h1>Döngüler</h1>
     <ul>
       @for(data of todos; track data){ <!-- Buradaki for yapısı ise yeni yapıdır buradaki fark track metodudur bu metod sayesinde sayfa güncellendiği zaman for'un döndürdüğü değerler
@@ -38,8 +39,8 @@ import { FormsModule, NgForm } from '@angular/forms';
     @if(showSecondWord) {
       <p style="color: green;">İkinci Yazı</p>
     }
+  </router-oulet>`,
 
-  `,
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
